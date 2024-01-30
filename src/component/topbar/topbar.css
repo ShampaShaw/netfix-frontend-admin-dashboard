@@ -5,6 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 999; 
+    background-color: rgb(215, 240, 231);
 }
 
 .topbarWrapper{

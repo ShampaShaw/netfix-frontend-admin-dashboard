@@ -49,3 +49,76 @@ export const userData = [
     },
     
   ];
+
+  export const userRows = [
+    { id: 1, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 2, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 3, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 4, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 5, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 6, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 7, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 8, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 9, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+    { id: 10, 
+        username: 'Shreyas Pathak', 
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZiDYVFY3pHMqANAFlTdWbwF2KpclMAbp8g&usqp=CAU', 
+        email: 'shreyas.ofc@gmail.com',
+        status: 'Active',
+        transaction: '$150.00'
+    },
+  ];
