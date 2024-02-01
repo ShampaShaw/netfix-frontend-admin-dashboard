@@ -50,6 +50,22 @@ export const userData = [
     
   ];
 
+  export const productData = [
+    {
+      name: 'January',
+      "Sales": 4000,
+    },
+    {
+      name: 'February',
+      "Sales": 3600,
+    },
+    {
+      name: 'March',
+      "Sales": 4000,
+    },
+  ];
+
+
   export const userRows = [
     { id: 1, 
         username: 'Shreyas Pathak', 

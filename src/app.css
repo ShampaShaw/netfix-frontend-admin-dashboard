@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    background-color: rgb(186, 212, 203);
 }
 
 .link{

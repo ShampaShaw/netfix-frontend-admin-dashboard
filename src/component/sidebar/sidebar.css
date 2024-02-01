@@ -3,6 +3,7 @@
     height: calc(100vh - 50px);
     position: sticky;
     top: 50px;
+    background-color: rgb(175, 204, 195);
 }
 
 .sidebarWrapper{
