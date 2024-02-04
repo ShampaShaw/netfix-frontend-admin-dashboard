@@ -9,9 +9,47 @@ import { NewUser } from './pages/newUser/NewUser';
 import ProductList from './pages/productList/ProductList';
 import { Product } from './pages/product/Product';
 import { NewProduct } from './pages/newProduct/NewProduct';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from 'axios'
 
 
 function App() {
+  const MONTHS = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+
+  const [userStats,setUserStats] = useState([])
+
+  useEffect(() => {
+    const getStats = async () => {
+      try{
+        const res =  axios.get("/users/stats", {headers:
+          {
+          token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODczNTkyNDJmYWVlODE3MzlhYWJmNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNjk2MzUyMCwiZXhwIjoxNzA3Mzk1NTIwfQ.RYwYUlbj8vJ_cnvgzZP0A58xmHmZSbWq23SjNArk2J0"
+          }
+        })
+        setUserStats(res.data)
+        console.log(userStats)
+      }catch(err){
+        console.log(err)
+      }
+    } 
+    getStats()
+  },[])
+
+
   return (
     <Router>
         <Topbar/>
