@@ -29,9 +29,9 @@ export default function Home() {
   useEffect(() => {
     const getStats = async () => {
       try{
-        const res = await axios.get("/users/stats", {headers:
+        const res = await axios.get("http://localhost:5000/api/users/stats", {headers:
           {
-          token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODczNTkyNDJmYWVlODE3MzlhYWJmNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzIzMjExOCwiZXhwIjoxNzA3NjY0MTE4fQ.8iMREagSWgFNaEfbpyVQTUokTdRVKXaUtFSEloD7Tig"
+          token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODczNTkyNDJmYWVlODE3MzlhYWJmNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzMyNDQxNywiZXhwIjoxNzA3NzU2NDE3fQ.DqTtvoXD8WFZIWUSN0iB5QIvtZSYCZ2Rti4jCqVv8Js"
           }
         })
         const statsList = res.data.sort(function(a,b) {
