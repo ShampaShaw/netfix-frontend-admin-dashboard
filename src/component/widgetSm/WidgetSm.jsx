@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './widgetSm.css'
 import { Visibility } from "@material-ui/icons"
+const server = process.env.SERVER_URL || "http://localhost:5000";  
 
 export const WidgetSm = () => {
   const [newUsers,setNewUsers] = useState([])
@@ -9,7 +10,7 @@ export const WidgetSm = () => {
   useEffect(() => {
     async function getNewUsers() {
       try{
-        const res = await axios.get('http://localhost:5000/api/users?new=true',{
+        const res = await axios.get(`${server}/api/users?new=true`,{
           headers : {
             token : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODczNTkyNDJmYWVlODE3MzlhYWJmNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNzMyNDQxNywiZXhwIjoxNzA3NzU2NDE3fQ.DqTtvoXD8WFZIWUSN0iB5QIvtZSYCZ2Rti4jCqVv8Js"
           }

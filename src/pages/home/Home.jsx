@@ -63,13 +63,6 @@ export default function Home() {
             name: MONTHS[item._id - 1], "New User": item.total
           }));
           setUserStats(stats)
-          console.log(userStats)
-          // statsList.map((item) =>
-          // setUserStats((prev) => [
-          //   ...prev,
-          //   { name: MONTHS[item._id - 1], "New User": item.total },
-          // ])
-        //);
       } catch (err) {
         console.error("Error fetching user stats:", err.message);
         // Optionally, display a user-friendly error message
@@ -78,8 +71,6 @@ export default function Home() {
   
     getStats();
   }, [MONTHS]);
-  
-  console.log("User Response:",userStats);  // Log the state after it has been updated
 
   return (
     <div className='home'>
