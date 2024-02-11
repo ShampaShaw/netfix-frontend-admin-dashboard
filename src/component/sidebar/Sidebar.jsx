@@ -50,9 +50,9 @@ const Sidebar = () => {
               Users
               </li>
             </Link>
-            <Link to='/products' className='link'>
+            <Link to='/movies' className='link'>
               <li className='sidebarListItem'>
-                <PlayCircleOutline className='sidebarIcon'/>
+              <PlayCircleOutline className='sidebarIcon'/>
                 Movies
               </li>
             </Link>
