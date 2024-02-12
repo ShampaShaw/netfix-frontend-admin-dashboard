@@ -5,7 +5,7 @@ import { DeleteOutline } from '@material-ui/icons'
 import { productRows } from '../../dummyData';
 import { Link } from 'react-router-dom'
 import { MovieContext } from '../../context/movieContext/movieContext';
-import { getMovies } from '../../context/movieContext/apiCalls';
+import { deleteMovie, getMovies } from '../../context/movieContext/apiCalls';
 
 const ProductList = () => {
     const { movies,dispatch } = useContext(MovieContext);
@@ -15,7 +15,7 @@ const ProductList = () => {
     }, [dispatch]);
 
     const handleDelete = (id) => {
-        //setData(data.filter(item => item.id !== id))
+        deleteMovie(id, dispatch);
     }
 
     const columns = [
@@ -42,7 +42,7 @@ const ProductList = () => {
                         <Link to={"/product/" + params.row.id}>
                             <button className='productListEdit'>Edit</button>
                         </Link>
-                        <DeleteOutline className='productListDelete' onClick={() => handleDelete(params.row.id)}/>
+                        <DeleteOutline className='productListDelete' onClick={() => handleDelete(params.row._id)}/>
                     </>
                 );
             }
