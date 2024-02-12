@@ -6,6 +6,7 @@ export const login = async (userCredentials, dispatch) => {
     dispatch(loginStart())
     try {
         const res = await axios.post(`${server}auth/login`, userCredentials)
+        res.data.isAdmin && dispatch(loginSuccess(res.data))      //if the user is admin then dispatch the loginSuccess function
         dispatch(loginSuccess(res.data))
     } catch (err) {
         dispatch(loginFailure())

@@ -18,6 +18,12 @@ const AuthReducer = (state, action) => {
             isFetching: false,
             error: true,
         };
+    case "LOGOUT":       // If the action type is "LOGIN_FAILURE", the function returns a new state object with the user property set to null, the isFetching property set to false, and the error property set to true.
+        return {
+            user: null,
+            isFetching: false,
+            error: false,
+        };
     default:
         return { ...state };            // If the action type does not match any of the cases, the function returns the current state.
     }

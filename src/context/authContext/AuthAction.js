@@ -10,3 +10,9 @@ export const loginSuccess = (user) => ({    // The loginSuccess function takes i
 export const loginFailure = () => ({        // The loginFailure function returns an object with a type property set to "LOGIN_FAILURE".
     type: "LOGIN_FAILURE",                  // The loginFailure function does not take in any arguments.
 })
+
+//logout
+
+export const logoutStart = () => ({
+    type: "LOGOUT",
+});
