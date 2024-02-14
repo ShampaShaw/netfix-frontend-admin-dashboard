@@ -49,7 +49,7 @@
 
 .productName{
     font-weight: 600;
-
+    color: black;
 }
 
 .productInfoBottom{
@@ -131,4 +131,12 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+}
+
+.productButton:hover{
+    background-color: rgb(6, 114, 78);
+}
+
+.productInfoKey{
+    margin-right: 20px;
 }
