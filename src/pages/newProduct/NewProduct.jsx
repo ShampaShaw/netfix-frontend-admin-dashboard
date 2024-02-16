@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './newProduct.css'
 import { storage } from '../../firebase';
+import { createMovie } from '../../context/movieContext/apiCalls';
+import { MovieContext } from '../../context/movieContext/movieContext';
 
 export const NewProduct = () => {
   const [movie, setMovie] = useState(null)
@@ -10,6 +12,8 @@ export const NewProduct = () => {
   const [trailer, setTrailer] = useState(null)
   const [video, setVideo] = useState(null)
   const [uploaded, setUploaded] = useState(0)
+
+  const { dispatch } = useContext(MovieContext);   //useDispatch is a hook that is used to get the dispatch function from the context. The dispatch function is used to call the actions in the reducer function.
 
   // const handleChange = (e) => {
   //   const value = e.target.value;
@@ -61,6 +65,11 @@ export const NewProduct = () => {
       {file: video, label: 'video'}
     ])
   }  // This is the handleUpload function that will be used to upload the image to the Firebase storage.
+
+  const handleSubmit = (e) => {   // This is the handleSubmit function that will be used to submit the form.
+    e.preventDefault();
+    createMovie(movie,dispatch);
+  }
 
   console.log(movie)
   return (
@@ -138,7 +147,7 @@ export const NewProduct = () => {
           />
         </div>
         {uploaded == 5 ? (
-          <button className='addProductButton'>Create</button>
+          <button className='addProductButton' onClick={handleSubmit}>Create</button>
         ) : (
           <button className='addProductButton' onClick={handleUpload}>Upload</button>
         )}
