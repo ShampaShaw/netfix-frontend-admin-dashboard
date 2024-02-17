@@ -7,15 +7,12 @@ import {
   TrendingUp,
   PermIdentity,
   PlayCircleOutline,
-  List,
   MailOutline,
   DynamicFeed,
   ChatBubbleOutline,
   WorkOutline,
   Report,
-  AddToQueue,
-  QueuePlayNext,
-  Storefront,
+  List
 } from "@material-ui/icons";
 
 const Sidebar = () => {
@@ -56,10 +53,12 @@ const Sidebar = () => {
                 Movies
               </li>
             </Link>
-            <li className='sidebarListItem'>
-              <TrendingUp className='sidebarIcon'/>
-              Transactions
-            </li>
+            <Link to='/lists' className='link'>
+              <li className='sidebarListItem'>
+                <List className='sidebarIcon'/>
+                Lists
+              </li>
+            </Link>
             <li className='sidebarListItem'>
               <TrendingUp className='sidebarIcon'/>
               Reports
