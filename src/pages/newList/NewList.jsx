@@ -1,12 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 import './newList.css'
 import { storage } from '../../firebase';
-import { createMovie } from '../../context/movieContext/apiCalls';
+import { createMovie,getMovies } from '../../context/movieContext/apiCalls';
 import { MovieContext } from '../../context/movieContext/movieContext';
 import { ListContext } from '../../context/listContext/ListContext';
+import { useNavigate } from 'react-router-dom';
+import { createList } from '../../context/listContext/apiCalls';
 
 export const NewList = () => {
   const [list, setList] = useState(null)
+  const navigate = useNavigate()  
 
   const { dispatch } = useContext(ListContext);   //useDispatch is a hook that is used to get the dispatch function from the context. The dispatch function is used to call the actions in the reducer function.
   const { movies, dispatch: dispatchMovie } = useContext(MovieContext);   //useDispatch is a hook that is used to get the dispatch function from the context. The dispatch function is used to call the actions in the reducer function.
@@ -14,6 +17,10 @@ export const NewList = () => {
   //   const value = e.target.value;
   //   setMovie({ ...movie, [e.target.name]: value });
   // };
+
+  useEffect(() => {
+    getMovies(dispatchMovie);
+  }, [dispatchMovie]);
 
   const handleChange = (e) => {
     const value = e.target.type === 'file' ? e.target.files[0] : e.target.value;
@@ -23,15 +30,17 @@ export const NewList = () => {
     });
   };
 
-  useEffect(() => {
-    getMovies(dispatchMovie);
-  }, [dispatchMovie]);
+  const handleSelect = (e) => {
+    let value = Array.from(e.target.selectedOptions, (option) => option.value);
+    setList({ ...list, [e.target.name]: value });
+  };
 
   const handleSubmit = (e) => {   // This is the handleSubmit function that will be used to submit the form.
     e.preventDefault();   //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    createList(list,dispatch)
+    navigate("/list")
   }
 
-  console.log(movie)
   return (
     <div className="newProduct">
       <h1 className="addProductTitle">New List</h1>
